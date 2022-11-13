@@ -2,6 +2,7 @@ import React from "react";
 import { Dropdown } from "primereact/dropdown";
 import "./Question.scss";
 import Menu from "./Menu";
+import SectionQuestion from "./SectionQuestion";
 const Question = () => {
   return (
     <div className="wrapper-component">
@@ -17,7 +18,9 @@ const Question = () => {
         <div>
           <Menu />
         </div>
-        <div>Questions</div>
+        <div>
+          <SectionQuestion />
+        </div>
       </div>
 
     </div>

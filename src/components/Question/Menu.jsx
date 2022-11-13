@@ -1,52 +1,61 @@
 import React from "react";
 import { TieredMenu } from "primereact/tieredmenu";
+import "./Menu.scss";
+import { AiOutlineApartment } from "react-icons/ai";
+import { IoAppsOutline, IoEllipsisHorizontalSharp, IoTimerOutline, IoTodayOutline} from "react-icons/io5"
+import { MdChecklistRtl, MdOutlineFilter1 } from "react-icons/md";
+import { TiThLargeOutline } from "react-icons/ti";
+import { TfiBookmarkAlt } from "react-icons/tfi";
+import { GoTextSize } from "react-icons/go";
+import { FaAmilia } from "react-icons/fa";
 
 const Menu = () => {
 
   const items = [
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Text",
+      icon:  () => <GoTextSize className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Text area",
+      icon: () => <FaAmilia className="icon"/> ,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Number",
+      icon: () => <MdOutlineFilter1 className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Date",
+      icon: () => <IoTodayOutline className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Hour",
+      icon: () => <IoTimerOutline className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Multiple option",
+      icon: () => <MdChecklistRtl className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Single option",
+      icon: () => <AiOutlineApartment className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Single option scale option",
+      icon: () => <IoEllipsisHorizontalSharp className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Dropdowns",
+      icon: () => <TfiBookmarkAlt className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Single option grid",
+      icon: () => <TiThLargeOutline className="icon"/>,
     },
     {
-      label: "File",
-      icon: "pi pi-fw pi-file",
+      label: "Multiple choice grid",
+      icon: () => <IoAppsOutline className="icon"/>,
+      
     },
     
   ];
@@ -54,8 +63,8 @@ const Menu = () => {
   return (
     <div>
       <div className="card">
-        <h2>Generator</h2>
-        <TieredMenu model={items} />
+        <h2 className="title-generator">Generator</h2>
+        <TieredMenu model={items} className="menu-question"/>
       </div>
     </div>
   );
