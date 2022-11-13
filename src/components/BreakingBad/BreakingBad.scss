@@ -1,13 +1,23 @@
 @import "./../../scss/mixins.scss";
 
 .wrapper-content {
+  height: auto;
   @include flex-center;
   flex-direction: column;
+  margin-right: 100px;
+}
+
+.card-bad {
+  @include img-styles;
 }
 
 img {
-    width: 390px;
-    height: 489px;
-    margin-bottom: 20px;
-    border-radius: 15px;
+  width: 390px;
+  height: 489px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.btn-quote {
+  margin-top: 20px;
 }

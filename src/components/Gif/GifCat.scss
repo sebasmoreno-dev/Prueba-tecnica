@@ -6,11 +6,13 @@
   .card-cat {
     display: flex;
     align-items: center;
+    @include img-styles;
   }
 
   .title-cat {
     margin-left: 25px;
     font-size: 1.8rem;
+    max-width: 50%;
   }
 
   Button {

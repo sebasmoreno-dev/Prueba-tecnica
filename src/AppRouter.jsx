@@ -11,15 +11,11 @@ import NavBarRoutes from "./layout/NavBar";
 const AppRouter = () => {
   return (
     <div className="App">
-
       <NavBarRoutes />
       <Routes>
-        {/* <Route path="/" element={<NavBarRoutes />}> */}
-          
-          <Route path="gif" element={<GifCat />} />
-          <Route path="breaking-bad" element={<BreakingBad />} />
-          <Route path="cuestion" element={<Question />} />
-        {/*</Route>*/}
+        <Route path="gif" element={<GifCat />} />
+        <Route path="breaking-bad" element={<BreakingBad />} />
+        <Route path="cuestion" element={<Question />} />
       </Routes>
     </div>
   );

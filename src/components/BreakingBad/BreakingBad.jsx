@@ -9,6 +9,7 @@ const BreakingBad = () => {
   const [quote, setQuote] = useState([]);
   const [image, setImage] = useState([]);
 
+  //*Fetch con async - await
   const getImage = async (author) => {
     try {
       const url = `https://breakingbadapi.com/api/characters?name=${author}`;
@@ -46,9 +47,11 @@ const BreakingBad = () => {
   return (
     <>
       <div className="wrapper-content">
-        <img src={image} alt={quote.author} />
-        <Button onClick={updateQuote}>Get a Quote</Button>
-        <Quote quote={quote} />
+        <div className="card-bad">
+          <img src={image} alt={quote.author} />
+          <Quote quote={quote} />
+        </div>
+        <Button onClick={updateQuote} className="btn-quote">Get a Quote</Button>
       </div>
     </>
   );

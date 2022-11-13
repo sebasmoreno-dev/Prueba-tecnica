@@ -10,6 +10,7 @@ const GifCat = () => {
   const [catFact, setCatFact] = useState("");
   const [gifCat, setGifCat] = useState("");
 
+  //*Fetch con .then
   const callGif = (string) => {
     fetch(`${API_URLGIF}/gifs/search?q=${string}&api_key=${API_KEYGIF}`)
       .then((res) => res.json())
@@ -37,7 +38,7 @@ const GifCat = () => {
         <Image src={gifCat} alt="img" template="Preview Content"/>
         <h1 className="title-cat">{catFact}</h1>
       </div>
-      <Button onClick={callCat}>Get a Gif cat fact</Button>
+      <Button onClick={callCat}>Get a GIF of cats 😺</Button>
     </div>
   );
 };
