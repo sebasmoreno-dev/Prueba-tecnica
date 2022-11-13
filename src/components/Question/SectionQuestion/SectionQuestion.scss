@@ -1,13 +1,15 @@
+@import "./../../../scss/mixins.scss";
+
 .wrapper-content {
   max-width: 1410px;
   width: 1195px;
-  height: 70px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 12px;
-  background-color: #f9f9f9;
+  background-color: $background-title;
   border-radius: 10px;
 
   .grid {

@@ -1,8 +1,9 @@
 import React from "react";
 import { Dropdown } from "primereact/dropdown";
 import "./Question.scss";
-import Menu from "./Menu";
-import SectionQuestion from "./SectionQuestion";
+import Menu from "./Menu/Menu.jsx";
+import SectionQuestion from "./SectionQuestion/SectionQuestion.jsx";
+
 const Question = () => {
   return (
     <div className="wrapper-component">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import "./SectionQuestion.scss";
-import CardQuestion from "./CardQuestion";
+import CardQuestion from "../CardQuestion/CardQuestion";
 
 const SectionQuestion = () => {
   const [value2, setValue2] = useState("");

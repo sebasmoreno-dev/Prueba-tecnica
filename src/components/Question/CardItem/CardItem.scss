@@ -12,11 +12,16 @@
     margin-bottom: 35px;
   }
 
+  .btn-container {
+        display: flex;
+  }
+
   .btn-second {
     margin-left: 15px;
   }
-  .btn-third {
+  p {
     margin-left: 40px;
+    color: #326FD1;
   }
 }
 
@@ -29,3 +34,6 @@
 .btn-second {
   @include styleclass('bg-orange-400 text-white hover:bg-blue-600 border-round transition-colors transition-duration-150 p-3 border-none');
 }
+
+
+/* border-dashed  */

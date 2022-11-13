@@ -1,10 +1,12 @@
+@import "./../../../scss/mixins.scss";
+
 .title-generator {
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
   margin-top: -20px;
-  background-color: #F9F9F9;
+  background-color: $background-title;
   border-radius: 10px;
 }
 
