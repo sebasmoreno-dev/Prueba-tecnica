@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import "./SectionQuestion.scss";
 import CardQuestion from "../CardQuestion/CardQuestion";
+import AddItem from "../AddItem/AddItem";
 
 const SectionQuestion = () => {
   const [value2, setValue2] = useState("");
@@ -29,6 +30,7 @@ const SectionQuestion = () => {
         </div>
       </div>
       <CardQuestion />
+      <AddItem />
     </div>
   );
 };

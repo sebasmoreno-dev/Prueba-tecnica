@@ -47,7 +47,7 @@ const BreakingBad = () => {
   return (
     <>
       <div className="wrapper-content-bad">
-        <div className="card-bad">
+        <div className="card-bad border-solid">
           <img src={image} alt={quote.author} />
           <Quote quote={quote} />
         </div>

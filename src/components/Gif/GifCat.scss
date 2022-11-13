@@ -2,11 +2,17 @@
 
 .wrapper-content-cat {
   flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  max-width: 60%;
+  margin-right: 94px;
 
   .card-cat {
     display: flex;
     align-items: center;
     @include img-styles;
+    
   }
 
   .title-cat {

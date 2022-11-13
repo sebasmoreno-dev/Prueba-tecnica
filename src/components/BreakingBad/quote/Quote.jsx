@@ -3,10 +3,10 @@ import React from "react";
 const Quote = ({ quote }) => {
   return (
     <div>
-      <p>
+      <h3>
         {quote.text}
         <span> - {quote.author}</span>
-      </p>
+      </h3>
     </div>
   );
 };

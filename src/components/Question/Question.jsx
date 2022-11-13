@@ -6,7 +6,7 @@ import SectionQuestion from "./SectionQuestion/SectionQuestion.jsx";
 
 const Question = () => {
   return (
-    <div className="wrapper-component">
+    <div className="wrapper-component-question">
       <div className="first-section">
         <h1>Question Pool</h1>
         <Dropdown
@@ -14,7 +14,7 @@ const Question = () => {
           placeholder="Select"
         />
       </div>
-      
+
       <div className="second-section">
         <div>
           <Menu />
@@ -23,7 +23,6 @@ const Question = () => {
           <SectionQuestion />
         </div>
       </div>
-
     </div>
   );
 };

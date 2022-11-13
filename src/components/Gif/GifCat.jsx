@@ -34,9 +34,9 @@ const GifCat = () => {
 
   return (
     <div className="wrapper-content-cat card">
-      <div className="card-cat">
+      <div className="card-cat border-solid">
         <Image src={gifCat} alt="img" template="Preview Content"/>
-        <h1 className="title-cat">{catFact}</h1>
+        <h2 className="title-cat">{catFact}</h2>
       </div>
       <Button onClick={callCat}>Get a GIF of cats 😺</Button>
     </div>
