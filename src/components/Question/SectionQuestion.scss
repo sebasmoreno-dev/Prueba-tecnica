@@ -1,6 +1,6 @@
 .wrapper-content {
   max-width: 1410px;
-  width: 1500px;
+  width: 1195px;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -10,10 +10,16 @@
   background-color: #f9f9f9;
   border-radius: 10px;
 
+  .grid {
+    margin-top: 1rem
+  }
+
   .input-text {
     width: auto;
+    height: 38px;
     padding-right: 100px;
     margin-right: 20px;
+    font-size: 35px;
   }
 }
 
