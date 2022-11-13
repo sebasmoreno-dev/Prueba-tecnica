@@ -1,0 +1,91 @@
+@import "./_variables.scss";
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin background-img {
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+@mixin input {
+  color: $color-placeholder;
+  text-align: center;
+}
+
+@mixin gradian-text {
+  color: $color-light;
+  text-shadow: 0px 2px 0px $blue;
+}
+
+@mixin text-modal {
+  color: $blue;
+  font-size: $size-text-modal;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@mixin modal-winner {
+  width: 75%;
+  height: 75vh;
+  @include flex-center;
+  @include background-img;
+  flex-direction: column;
+}
+
+@mixin modal-info {
+  width: 60%;
+  height: 70vh;
+  @include flex-center;
+  @include background-img;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+@mixin modal-size {
+  width: 85%;
+  height: 70vh;
+}
+
+@mixin button-select {
+  background-color: $light-blue;
+  border: 3px solid $yellow;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+}
+
+@mixin video-size {
+  width: 97%;
+  height: 75vh;
+  padding: 10px;
+}
+
+@mixin copa-size {
+  width: 170px;
+  height: 170px;
+}

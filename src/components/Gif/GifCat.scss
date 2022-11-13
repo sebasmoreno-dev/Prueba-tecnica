@@ -1,0 +1,19 @@
+@import "./../../scss/mixins.scss";
+
+.wrapper-content-cat {
+  flex-direction: column;
+
+  .card-cat {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-cat {
+    margin-left: 25px;
+    font-size: 1.8rem;
+  }
+
+  Button {
+    margin-top: 20px;
+  }
+}

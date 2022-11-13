@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { API_CAT, API_KEYGIF, API_URLGIF } from "../../services/setting";
-
+import { Image } from 'primereact/image';
+import "./GifCat.scss";
+import { Button } from "primereact/button";
 
 //Fetch utilizando .then
 const GifCat = () => {
@@ -30,10 +32,13 @@ const GifCat = () => {
   }, []);
 
   return (
-    <>
-      <h1>{catFact}</h1>
-      <img src={gifCat} />
-    </>
+    <div className="wrapper-content-cat card">
+      <div className="card-cat">
+        <Image src={gifCat} alt="img" template="Preview Content"/>
+        <h1 className="title-cat">{catFact}</h1>
+      </div>
+      <Button onClick={callCat}>Get a Gif cat fact</Button>
+    </div>
   );
 };
 

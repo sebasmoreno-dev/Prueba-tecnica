@@ -5,7 +5,7 @@ const Quote = ({ quote }) => {
     <div>
       <p>
         {quote.text}
-        <span>- {quote.author}</span>
+        <span> - {quote.author}</span>
       </p>
     </div>
   );

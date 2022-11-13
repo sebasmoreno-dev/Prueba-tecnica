@@ -1,47 +1,53 @@
 import React, { useEffect, useState } from "react";
-import GetImages from "./getImages";
 import Quote from "./quote/Quote";
 import { API_BREAKINGBAD_RANDOM } from "../../services/setting";
+import { Button } from 'primereact/button';
+import "./BreakingBad.scss";
+import noImage from "./../../assets/no-imagen.jpg";
 
 const BreakingBad = () => {
   const [quote, setQuote] = useState([]);
   const [image, setImage] = useState([]);
 
   const getImage = async (author) => {
-    const url = `https://breakingbadapi.com/api/characters?name=${author}`;
-    const res = await fetch(url);
-    const [images] = await res.json();
-    const { img } = images;
-    setImage(img);
-    console.log(img)
+    try {
+      const url = `https://breakingbadapi.com/api/characters?name=${author}`;
+      const res = await fetch(url);
+      const [images] = await res.json();
+      const img = images ? images.img : noImage;
+      setImage(img);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const updateQuote = async () => {
-    const url = API_BREAKINGBAD_RANDOM;
-    const res = await fetch(url);
-    const [newQuote] = await res.json();
+    try {
+      const url = API_BREAKINGBAD_RANDOM;
+      const res = await fetch(url);
+      const [newQuote] = await res.json();
 
-    const { quote: text, author } = newQuote;
-    
-    setQuote({
-      text: text,
-      author: author,
-    });
-    
-    console.log(author)
-    getImage(author)
+      const { quote: text, author } = newQuote;
+
+      setQuote({
+        text: text,
+        author: author,
+      });
+      getImage(author);
+    } catch (error) {
+      console.log(error, "No se encontro la imagen");
+    }
   };
 
   useEffect(() => {
-    getImage()
+    updateQuote()
   }, []);
 
   return (
     <>
-      <div>
-        {/* <GetImages /> */}
-        <img src={image} alt="" />
-        <button onClick={updateQuote}>get Another</button>
+      <div className="wrapper-content">
+        <img src={image} alt={quote.author} />
+        <Button onClick={updateQuote}>Get a Quote</Button>
         <Quote quote={quote} />
       </div>
     </>
