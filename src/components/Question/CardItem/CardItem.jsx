@@ -2,15 +2,17 @@ import React from "react";
 import "./CardItem.scss";
 import { Button } from "primereact/button";
 
-const CardItem = () => {
+
+const CardItem = ({ title, option, category, seeContent }) => {
+
   return (
     <div className="card-wrapper">
-      <h3 className="title-card">Example question one</h3>
+      <h3 className="title-card">{title}</h3>
       <div className="btn-container">
-        <Button className="btn-first">Multiple option</Button>
-        <Button className="btn-second">Category</Button>
+        <Button className="btn-first">{option}</Button>
+        <Button className="btn-second">{category}</Button>
         <div>
-          <p>See content</p>
+          <p>{seeContent}</p>
         </div>
       </div>
     </div>

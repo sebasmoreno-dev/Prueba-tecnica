@@ -16,6 +16,7 @@ const AppRouter = () => {
         <Route path="gif" element={<GifCat />} />
         <Route path="breaking-bad" element={<BreakingBad />} />
         <Route path="cuestion" element={<Question />} />
+        <Route path="/" element={<GifCat />} />
       </Routes>
     </div>
   );
